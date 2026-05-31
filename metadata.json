@@ -1,0 +1,6 @@
+{
+  "name": "Main Bazar",
+  "description": "Main Bazar is an online number guessing game offering live results, game rates, chart indices, game timetables, and direct support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
