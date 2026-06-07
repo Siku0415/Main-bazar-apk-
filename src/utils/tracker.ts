@@ -6,14 +6,14 @@ declare global {
 }
 
 /**
- * Tracks the "SubmitApplication" event across both browser Meta Pixel and
+ * Tracks the "Subscribe" event across both browser Meta Pixel and
  * server-side Meta Conversions API (CAPI).
  * 
  * @param value Monetary value associated with the event (e.g. 100, 500)
  * @param currency Currency code (defaults to 'INR')
  */
-export async function trackSubmitApplication(value: number = 100, currency: string = 'INR') {
-  const eventName = 'SubmitApplication';
+export async function trackSubscribe(value: number = 100, currency: string = 'INR') {
+  const eventName = 'Subscribe';
   
   // 1. Client-Side Browser Pixel tracking
   try {
@@ -35,7 +35,7 @@ export async function trackSubmitApplication(value: number = 100, currency: stri
         currency: currency,
       });
       
-      // Also track as a custom event in case Meta dashboards filter standard named SubmitApplication as custom
+      // Also track as a custom event in case Meta dashboards filter standard named Subscribe as custom
       window.fbq('trackCustom', eventName, {
         value: value,
         currency: currency,
@@ -90,4 +90,11 @@ export async function trackSubmitApplication(value: number = 100, currency: stri
   } catch (err) {
     console.error('[Tracker] Error calling server-side CAPI proxy route:', err);
   }
+}
+
+/**
+ * Backward compatibility alias for trackSubmitApplication
+ */
+export async function trackSubmitApplication(value: number = 100, currency: string = 'INR') {
+  return trackSubscribe(value, currency);
 }

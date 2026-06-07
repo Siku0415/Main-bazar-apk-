@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Star, MessageSquare, Quote, CheckCircle2, User, PlusCircle, X, ShieldCheck } from 'lucide-react';
 import { Language, translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
-import { trackSubmitApplication } from '../utils/tracker';
 
 interface Testimonial {
   id: string;
@@ -157,9 +156,6 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ curren
     // Update state
     setTestimonials([newFeedback, ...testimonials]);
     setIsModalOpen(false);
-
-    // Track the feedback submission as SubmitApplication with dynamic value based on rating
-    trackSubmitApplication(rating * 100, 'INR');
     
     // Trigger localized feedback complete toast
     setShowSuccessToast(true);

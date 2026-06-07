@@ -36,7 +36,7 @@ import { FAQSection } from './components/FAQSection';
 import { MainBazarLogo } from './components/MainBazarLogo';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { Language, translations } from './translations';
-import { trackSubmitApplication } from './utils/tracker';
+import { trackSubscribe } from './utils/tracker';
 
 const CONTACT_NUMBER = "8829821655";
 const APK_DOWNLOAD_URL = "https://mainbazarronlinematka.site/app/mainbazar.apk";
@@ -159,8 +159,8 @@ export default function App() {
           clearInterval(interval);
           setIsDownloadDone(true);
           
-          // Track dynamic event SubmitApplication for successful app installation start
-          trackSubmitApplication(200, 'INR');
+          // Track dynamic event Subscribe for successful app installation start
+          trackSubscribe(200, 'INR');
           
           // Trigger actual browser download
           const link = document.createElement("a");
@@ -972,7 +972,7 @@ export default function App() {
             <div className="space-y-1.5 text-[11px] bg-zinc-900/60 p-2.5 rounded-xl border border-zinc-800/80 mb-3">
               <div className="flex justify-between items-center">
                 <span className="text-zinc-400">Pixel ID:</span>
-                <span className="font-mono font-bold text-amber-500">1771954590165539</span>
+                <span className="font-mono font-bold text-amber-500">1347133480769229</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-zinc-400">Meta Pixel Script:</span>

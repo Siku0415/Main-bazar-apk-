@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FileText, MessageCircle, Star, Sparkles, AlertCircle, RefreshCw, CheckCircle2, Download } from 'lucide-react';
 import { Game } from '../types';
-import { trackSubmitApplication } from '../utils/tracker';
 
 interface PlayDemoProps {
   games: Game[];
@@ -67,9 +66,6 @@ export const PlayDemo: React.FC<PlayDemoProps> = ({ games, phoneNumber, onDownlo
       spentPoints: ptVal,
       estimatedReturn: returnEstimate,
     });
-
-    // Track ticket generation as SubmitApplication with dynamic spentPoints value
-    trackSubmitApplication(ptVal, 'INR');
   };
 
   const ticketText = ticket

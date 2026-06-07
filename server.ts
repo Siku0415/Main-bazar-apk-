@@ -3,8 +3,8 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 
 // Fallbacks for Meta Pixel and CAPI
-const DEFAULT_CAPI_TOKEN = "EAAfzsG13tWkBRiKJhc26jue4AqXqq6feMwtM5KSsIUjGOX4rZCulnrzB0rNKjBLKvIZBlV6Wyv8WV3EgwOr8NvPQS6Uw4GInOjivxjaMk7cW2ChHchemMJKaw6EdrSkECkI3O7M4sE5tycTsuz3fkIhQdOjsChoPNREvewELwGRIo66GL2hGU8SNaCVAZDZD";
-const DEFAULT_PIXEL_ID = "1771954590165539";
+const DEFAULT_CAPI_TOKEN = "EAAM9wqleN8UBRiDZAbOhnISn5ANqGxUVSz2Gy66EYvZCeH85LmHEiaQY0eTG79e41i9BPnLSqMqnRXLOEweP3da3fBCfdMaEUK460XgYZCeAMRKx6ZBBjtvHyhqUGnVnobKYGnTZAcgPnAgjHtH60Y1lBHu3LQOnRAFtz41e0XbtzD7i5ZByPtbNHY0PbjAEWVeAZDZD";
+const DEFAULT_PIXEL_ID = "1347133480769229";
 
 async function startServer() {
   const app = express();
